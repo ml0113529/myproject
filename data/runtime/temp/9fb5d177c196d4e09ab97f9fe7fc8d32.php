@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:44:"./application/admin/template/index/index.htm";i:1547458020;s:86:"/Users/lixiangyang/Desktop/projects/test/application/admin/template/public/menubox.htm";i:1516929060;s:83:"/Users/lixiangyang/Desktop/projects/test/application/admin/template/public/left.htm";i:1547888446;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:44:"./application/admin/template/index/index.htm";i:1554362263;s:85:"/Users/lixiangyang/Desktop/projects/cms/application/admin/template/public/menubox.htm";i:1516929060;s:82:"/Users/lixiangyang/Desktop/projects/cms/application/admin/template/public/left.htm";i:1547888446;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -11,7 +11,7 @@
 <!-- Apple devices fullscreen -->
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" media="screen"/>
-<title><?php echo (isset($global['web_name']) && ($global['web_name'] !== '')?$global['web_name']:''); ?>-<?php if(!(empty($is_eyou_authortoken) || (($is_eyou_authortoken instanceof \think\Collection || $is_eyou_authortoken instanceof \think\Paginator ) && $is_eyou_authortoken->isEmpty()))): ?>易优CMS企业网站管理系统<?php endif; ?><?php echo $version; ?></title>
+<title><?php echo (isset($global['web_name']) && ($global['web_name'] !== '')?$global['web_name']:''); ?><?php echo $version; ?></title>
 <script type="text/javascript">
     var eyou_basefile = "<?php echo \think\Request::instance()->baseFile(); ?>";
     var module_name = "<?php echo MODULE_NAME; ?>";
@@ -114,18 +114,18 @@
               </a>
               <?php if(!(empty($is_eyou_authortoken) || (($is_eyou_authortoken instanceof \think\Collection || $is_eyou_authortoken instanceof \think\Paginator ) && $is_eyou_authortoken->isEmpty()))): ?>
               <!-- 商业授权 -->   
-              <em class="eyou_tool em_authortoken" data-expanded="close">
-                <a class="btn btn-default dropdown-toggle" title="购买后可去除所有版权提示" href="javascript:void(0);" onclick="valide(this);">
-                  <i class="fa fa-bookmark"></i>
-                  <span class="hidden-xs">购买授权</span>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="shouquan">
-                    <li class="met-tool-list text-center"><a target="_blank" class="liaojie" href="http://www.eyoucms.com/buy/">了解商业授权</a></li>
-                    <li class="met-tool-list text-center">
-                      <input class="btn btn-primary" type="button" onclick="$('.em_authortoken').toggleClass('open');openItem('Index|authortoken');" value="录入商业授权" />
-                    </li>
-                </ul>
-               </em>
+              <!--<em class="eyou_tool em_authortoken" data-expanded="close">-->
+                <!--<a class="btn btn-default dropdown-toggle" title="购买后可去除所有版权提示" href="javascript:void(0);" onclick="valide(this);">-->
+                  <!--<i class="fa fa-bookmark"></i>-->
+                  <!--<span class="hidden-xs">购买授权</span>-->
+                <!--</a>-->
+                <!--<ul class="dropdown-menu" role="menu" aria-labelledby="shouquan">-->
+                    <!--<li class="met-tool-list text-center"><a target="_blank" class="liaojie" href="http://www.eyoucms.com/buy/">了解商业授权</a></li>-->
+                    <!--<li class="met-tool-list text-center">-->
+                      <!--<input class="btn btn-primary" type="button" onclick="$('.em_authortoken').toggleClass('open');openItem('Index|authortoken');" value="录入商业授权" />-->
+                    <!--</li>-->
+                <!--</ul>-->
+               <!--</em>-->
               <!-- 商业授权 -->   
               <?php endif; if(0 < intval($web_language_switch)): ?>
               <!-- 多语言 -->
